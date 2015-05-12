@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.wheatherjason.MainActivity" >
+
+    <TextView
+      android:id="@+id/location"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="15dp"
+      android:text="Location"
+      android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <Button
+       android:id="@+id/btinfo"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/location"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="20dp"
+       android:onClick="open"
+       android:text="Get Wheather Info" />
+
+   <EditText
+       android:id="@+id/txtloc"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBottom="@+id/location"
+       android:layout_alignParentRight="true"
+       android:ems="10" >
+
+       <requestFocus />
+   </EditText>
+
+   <TextView
+       android:id="@+id/country"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/location"
+       android:layout_below="@+id/btinfo"
+       android:layout_marginTop="48dp"
+       android:text="Country"
+       android:textAppearance="?android:attr/textAppearanceSmall" />
+
+   <TextView
+       android:id="@+id/temperature"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/country"
+       android:layout_marginTop="30dp"
+       android:textAppearance="?android:attr/textAppearanceSmall" 
+       android:text="Temperature" 
+        />
+
+   <EditText
+       android:id="@+id/txttemp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBottom="@+id/temperature"
+       android:layout_toRightOf="@+id/temperature"
+       android:ems="10" />
+
+   <TextView
+       android:id="@+id/humidity"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/temperature"
+       android:layout_below="@+id/temperature"
+       android:layout_marginTop="30dp"
+       android:text="Humidity"
+       android:textAppearance="?android:attr/textAppearanceSmall"  />
+
+   <EditText
+       android:id="@+id/txthumidity"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBottom="@+id/humidity"
+       android:layout_alignRight="@+id/txttemp"
+       android:ems="10" />
+
+   <TextView
+       android:id="@+id/pressure"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/humidity"
+       android:layout_below="@+id/humidity"
+       android:layout_marginTop="30dp"
+       android:text="Pressure" />
+
+   <EditText
+       android:id="@+id/txtpressure"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBottom="@+id/pressure"
+       android:layout_toRightOf="@+id/location"
+       android:ems="10" />
+
+   <EditText
+       android:id="@+id/txtcountry"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/temperature"
+       android:layout_toRightOf="@+id/humidity"
+       android:ems="10" />
+
+</RelativeLayout>
